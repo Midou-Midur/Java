@@ -20,7 +20,9 @@ public interface IModel {
      * @throws SQLException
      *             the SQL exception
      */
-    Example getExampleById(int id) throws SQLException;
+	Example getExampleById(int id) throws SQLException;
+	
+	Map1 readMap1(int id) throws SQLException;
 
     /**
      * Gets the example by name.

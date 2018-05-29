@@ -1,5 +1,6 @@
 package model;
 
+
 import java.sql.SQLException;
 import java.util.List;
 
@@ -46,5 +47,10 @@ public final class ModelFacade implements IModel {
     public List<Example> getAllExamples() throws SQLException {
         return ExampleDAO.getAllExamples();
     }
+
+	public Map1 readMap1(final int id) throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }
