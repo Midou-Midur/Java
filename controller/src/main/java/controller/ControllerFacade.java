@@ -1,5 +1,11 @@
 package controller;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -40,19 +46,19 @@ public class ControllerFacade implements IController {
      *
      * @throws SQLException
      *             the SQL exception
+     * @throws IOException 
      */
-    public void start() throws SQLException {
-        this.getView().displayMessage(this.getModel().getExampleById(1).toString());
-
-        this.getView().displayMessage(this.getModel().getExampleByName("Example 2").toString());
-
-        final List<Example> examples = this.getModel().getAllExamples();
+    public void start() throws SQLException, IOException {
+        this.getView().displayMessage(this.getModel().getMap1ById(1).toString());
+        
         final StringBuilder message = new StringBuilder();
-        for (final Example example : examples) {
-            message.append(example);
-            message.append('\n');
-        }
+        
         this.getView().displayMessage(message.toString());
+        Path path = Paths.get("oui");
+        File f = new File ("olala.txt");
+        FileWriter fw = new FileWriter (f);
+       
+            fw.write ("Oui");
     }
 
     /**

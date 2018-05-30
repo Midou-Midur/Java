@@ -1,5 +1,6 @@
 package main;
 
+import java.io.IOException;
 import java.sql.SQLException;
 
 
@@ -23,8 +24,9 @@ public abstract class Main {
      *
      * @param args
      *            the arguments
+     * @throws IOException 
      */
-    public static void main(final String[] args) {
+    public static void main(final String[] args) throws IOException {
         final ControllerFacade controller = new ControllerFacade(new ViewFacade(), new ModelFacade());
         Fenetre fen = new Fenetre();
 

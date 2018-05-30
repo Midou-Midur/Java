@@ -18,6 +18,7 @@ public class Map1DAO extends AbstractDAO{
     /** The name column index. */
     private static int    nameColumnIndex  = 2;
 
+    	
     /**
      * Gets the example by id.
      *
@@ -27,10 +28,11 @@ public class Map1DAO extends AbstractDAO{
      * @throws SQLException
      *             the SQL exception
      */
-    public static Map1 getExampleById(final int id) throws SQLException {
+    public static Map1 getMap1ById(final int id) throws SQLException {
         final CallableStatement callStatement = prepareCall(sqlReadMap1);
         Map1 map1 = null;
-        callStatement.setInt(1, id);
+
+		callStatement.setInt(1, id);
         if (callStatement.execute()) {
             final ResultSet result = callStatement.getResultSet();
             if (result.first()) {

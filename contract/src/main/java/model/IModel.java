@@ -22,7 +22,7 @@ public interface IModel {
      */
 	Example getExampleById(int id) throws SQLException;
 	
-	Map1 readMap1(int id) throws SQLException;
+	Map1 getMap1ById(int id) throws SQLException;
 
     /**
      * Gets the example by name.
