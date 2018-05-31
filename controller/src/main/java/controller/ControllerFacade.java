@@ -1,15 +1,8 @@
 package controller;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.sql.SQLException;
-import java.util.List;
 
-import model.Example;
+import java.io.IOException;
+import java.sql.SQLException;
 import model.IModel;
 import view.IView;
 
@@ -26,6 +19,7 @@ public class ControllerFacade implements IController {
 
     /** The model. */
     private final IModel model;
+
 
     /**
      * Instantiates a new controller facade.
@@ -49,16 +43,14 @@ public class ControllerFacade implements IController {
      * @throws IOException 
      */
     public void start() throws SQLException, IOException {
-        this.getView().displayMessage(this.getModel().getMap1ById(1).toString());
-        
-        final StringBuilder message = new StringBuilder();
-        
-        this.getView().displayMessage(message.toString());
-        Path path = Paths.get("oui");
-        File f = new File ("olala.txt");
-        FileWriter fw = new FileWriter (f);
-       
-            fw.write ("Oui");
+    		
+    	
+        for(int i = 1;i <= 12; i++)
+        {
+        	this.getView().displayMessage(this.getModel().getMap1ById(i).toString());
+
+        }
+
     }
 
     /**

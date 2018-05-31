@@ -24,5 +24,7 @@ public class Map1 {
 	        this.name = name;
 	    }
 
-
+	    public String toString() {
+	        return this.getName();
+	    }
 }

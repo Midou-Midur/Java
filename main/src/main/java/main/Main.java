@@ -7,7 +7,6 @@ import java.sql.SQLException;
 import controller.ControllerFacade;
 import model.ModelFacade;
 import view.ViewFacade;
-import view.Fenetre;
 
 /**
  * <h1>The Class Main.</h1>
@@ -28,7 +27,7 @@ public abstract class Main {
      */
     public static void main(final String[] args) throws IOException {
         final ControllerFacade controller = new ControllerFacade(new ViewFacade(), new ModelFacade());
-        Fenetre fen = new Fenetre();
+        
 
         try {
             controller.start();

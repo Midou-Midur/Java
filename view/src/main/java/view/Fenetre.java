@@ -12,15 +12,15 @@ public class Fenetre extends JFrame {
 
 public Fenetre(){             
     this.setTitle("Lorann");
-    this.setSize(640, 380);
-    this.setLocationRelativeTo(null);               
+    this.setSize(640, 384);
+    this.setLocationRelativeTo(null);
  
     //Instanciation d'un objet JPanel
-    JPanel pan = new JPanel();
-    //Définition de sa couleur de fond
-    pan.setBackground(Color.BLACK);        
-    //On prévient notre JFrame que notre JPanel sera son content pane
-    this.setContentPane(pan);               
+    //Définition de sa couleur de fond     
+    
+
+
     this.setVisible(true);
+
   }       
 }

@@ -1,5 +1,9 @@
 package view;
 
+import java.awt.Graphics;
+import java.io.IOException;
+
+
 /**
  * <h1>The Interface IView.</h1>
  *
@@ -13,6 +17,9 @@ public interface IView {
      *
      * @param message
      *            the message
+     * @throws IOException 
      */
-    void displayMessage(String message);
+	
+    void displayMessage(String message) throws IOException;
+
 }
