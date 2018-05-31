@@ -1,6 +1,6 @@
 package model.mapgame.sprite.character;
 
-import game.commons.Position;
+import javax.swing.text.Position;
 
 public class Monster extends AbstractCharacter implements IMonster{
 

@@ -18,5 +18,15 @@ public class Position2 {
 		public int getY() {
 			return y;
 		}
+
+		public int getY2() {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+
+		public int getX2() {
+			// TODO Auto-generated method stub
+			return 0;
+		}
 		
 }

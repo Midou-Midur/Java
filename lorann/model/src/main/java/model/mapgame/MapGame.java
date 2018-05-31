@@ -4,6 +4,7 @@ import javax.swing.text.Position;
 
 import game.commons.GameConstants;
 import game.commons.GameException;
+import game.commons.GamerException;
 import game.commons.Position1;
 import game.commons.Position2;
 
@@ -15,24 +16,29 @@ public class MapGame implements IMapGame {
 	//Exception => Position (x,y) is busy by an element
 	public void addElement(Position position, IMapElement element) throws GameException {
 		checkPosition(position);
-		if (elements[position.getY()][position.getX()] != null) {
-			throw new GameException("Position (" + ((Position1) position).getX() + ", " + position.getY() + ") is busy");
+		if (elements[((Position1) position).getY()][((Position1) position).getX()] != null) {
+			throw new GameException("Position (" + ((Position1) position).getX() + ", " + ((Position1) position).getY() + ") is busy");
 		}
 		//An element has a the position by axes x/y 
-		elements[position.getY()][position.getX()] = element;
+		elements[((Position1) position).getY()][((Position1) position).getX()] = element;
 		//Position of an element adding in the table of position
 		element.setPosition(position);
 	}
 
 	@Override
-	public IMapElement getElement(Position1 position, Position2 position) {
-		checkPosition(position);
-		if (elements[position.getY()][position.getX()] == elements[position.getY2()][position.getX2()]) {
-			throw new GamerException("Position (" + position.getX2() + ", " + position.getY2() + ") is busy"); 
+	public IMapElement getElement(Position1 position, Position2 position2) throws GamerException, GameException {
+		try {
+			checkPosition((Position) position2);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		if (elements[position2.getY()][position2.getX()] == elements[position2.getY2()][position2.getX2()]) {
+			throw new GamerException("Position (" + position2.getX2() + ", " + position2.getY2() + ") is busy"); 
 			
 		}
 		
-		return elements[position.getY()][position.getX()];
+		return elements[position2.getY()][position2.getX()];
 	}
 
 	@Override
@@ -41,12 +47,12 @@ public class MapGame implements IMapGame {
 	}
 
 	void checkPosition(Position position) throws GameException {
-		if (position.getX() < 0 || position.getX() >= GameConstants.MAX_GAME_COLUMNS) {
-			throw new GameException("Position x(" + position.getX() + ") out of range");
+		if (((Position1) position).getX() < 0 || ((Position1) position).getX() >= GameConstants.MAX_GAME_COLUMNS) {
+			throw new GameException("Position x(" + ((Position1) position).getX() + ") out of range");
 		}
 
-		if (position.getY() < 0 || position.getY() >= GameConstants.MAX_GAME_ROWS) {
-			throw new GameException("Position y(" + position.getY() + ") out of range");
+		if (((Position1) position).getY() < 0 || ((Position1) position).getY() >= GameConstants.MAX_GAME_ROWS) {
+			throw new GameException("Position y(" + ((Position1) position).getY() + ") out of range");
 		}
 	}
 

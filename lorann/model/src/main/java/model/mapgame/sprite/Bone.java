@@ -1,6 +1,6 @@
 package model.mapgame.sprite;
 
-import game.commons.Position;
+import javax.swing.text.Position;
 
 public class Bone extends AbstractSprite implements IBone{
 

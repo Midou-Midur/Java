@@ -1,7 +1,11 @@
 package model.mapgame;
 
+import javax.swing.text.Position;
+
 import game.commons.GameException;
+import game.commons.GamerException;
 import game.commons.Position1;
+import game.commons.Position2;
 
 public interface IMapGame {
 	/**
@@ -25,5 +29,11 @@ public interface IMapGame {
 	 * @param position
 	 */
 	void removeElement(Position1 position);
+
+	void addElement(Position position, IMapElement element) throws GameException;
+
+	void removeElement(Position position);
+
+	IMapElement getElement(Position1 position, Position2 position2) throws GamerException, GameException;
 	
 }
