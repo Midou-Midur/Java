@@ -1,10 +1,10 @@
 package game.commons;
 
-public class Position {
+public class Position1 {
 	private final int x;
 	private final int y;
 
-	public Position(int x, int y) {
+	public Position1(int x,int y) {
 		super();
 		this.x = x;
 		this.y = y;

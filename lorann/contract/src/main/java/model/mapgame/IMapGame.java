@@ -1,7 +1,7 @@
 package model.mapgame;
 
 import game.commons.GameException;
-import game.commons.Position;
+import game.commons.Position1;
 
 public interface IMapGame {
 	/**
@@ -11,19 +11,19 @@ public interface IMapGame {
 	 * @throws GameException If Position is out of range(number of position) 
 	 * or Position is busy
 	 */
-	void addElement(Position position, IMapElement element) throws GameException;
+	void addElement(Position1 position, IMapElement element) throws GameException;
 	
 	/**
 	 * Receiving an element in the map by Position
 	 * @param position
 	 * @return
 	 */
-	IMapElement getElement (Position position);
+	IMapElement getElement (Position1 position);
 	
 	/**
 	 * Deleting an element in the Postion
 	 * @param position
 	 */
-	void removeElement(Position position);
+	void removeElement(Position1 position);
 	
 }

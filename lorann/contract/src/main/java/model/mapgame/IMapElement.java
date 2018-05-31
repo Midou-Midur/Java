@@ -1,6 +1,7 @@
 package model.mapgame;
 
-import game.commons.Position;
+import javax.swing.text.Position;
+import game.commons.Position1;
 
 public interface IMapElement {
 	
@@ -14,5 +15,5 @@ public interface IMapElement {
 	 * Receiving the Position
 	 * @return
 	 */
-	Position getPosition();
+	Position1 getPosition();
 }
