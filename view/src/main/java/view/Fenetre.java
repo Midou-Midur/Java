@@ -18,7 +18,7 @@ public Fenetre(){
     //Instanciation d'un objet JPanel
     //Définition de sa couleur de fond     
     
-
+    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
     this.setVisible(true);
 
