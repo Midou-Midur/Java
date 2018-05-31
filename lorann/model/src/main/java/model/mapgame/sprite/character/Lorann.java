@@ -2,21 +2,15 @@ package model.mapgame.sprite.character;
 
 public class Lorann extends AbstractCharacter implements ILorann {
 
-	private Result result;
+	private final IResult score;
 
-	public Lorann(Result result) {
-		super();
-		this.result = result;
-	}
-
-	public Result getResult() {
-		return result;
+	public Lorann(FBallEnum fBall) {
+		super(fBall);
+		this.score = new Result();
 	}
 
 	@Override
-	public boolean isAlive() {
-		// TODO Auto-generated method stub
-		return false;
+	public IResult getResult() {
+		return score;
 	}
-
 }
