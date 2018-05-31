@@ -6,47 +6,20 @@ import java.util.Observer;
 
 import javax.swing.JFrame;
 
-/**
- * <h1>The Class BoardFrame.</h1>
- * <p>
- * This class is just used to load the BoardPanel. It extends JPanel and implements IBoard.
- * </p>
- * <p>
- * As the BoardPanel is a private class, BoardPanel is a Facade.
- * </p>
- *
- * @author Anne-Emilie DIET
- * @version 3.0
- * @see JFrame
- * @see BoardPanel
- * @see Dimension
- * @see Rectangle
- * @see IBoard
- * @see ISquare
- * @see IPawn
- */
+
 public class BoardFrame extends JFrame implements IBoard {
 
-    /** The Constant serialVersionUID. */
     private static final long serialVersionUID = -6563585351564617603L;
 
-    /** The initial frame size. */
     private static final int  defaultFrameSize = 700;
 
-    /** The board panel. */
+
     private final BoardPanel  boardPanel;
 
-    /**
-     * Instantiates a new board frame.
-     *
-     * @param title
-     *            the title of the frame
-     * @param decorated
-     *            the decorated
-     */
+
     public BoardFrame(final String title, final Boolean decorated) {
         super();
-        this.setTitle(title);
+        this.setTitle("Lorann");
         this.setSize(defaultFrameSize, defaultFrameSize);
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

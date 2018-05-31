@@ -12,14 +12,11 @@ import java.io.IOException;
  */
 public interface IView {
 
-    /**
-     * Display message.
-     *
-     * @param message
-     *            the message
-     * @throws IOException 
-     */
-	
+
     void displayMessage(String message) throws IOException;
+
+	void oui11();
+	
+	void Fenetre();
 
 }

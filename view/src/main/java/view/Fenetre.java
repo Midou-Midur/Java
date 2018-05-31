@@ -1,8 +1,9 @@
 package view;
 
-import java.awt.Color; 
+import java.awt.Color;
+
 import javax.swing.JFrame;
-import javax.swing.JPanel;
+
  
 public class Fenetre extends JFrame {
   /**
@@ -12,15 +13,11 @@ public class Fenetre extends JFrame {
 
 public Fenetre(){             
     this.setTitle("Lorann");
-    this.setSize(640, 384);
-    this.setLocationRelativeTo(null);
- 
-    //Instanciation d'un objet JPanel
-    //Définition de sa couleur de fond     
-    
+    this.setSize(655, 419);
+    this.setLocationRelativeTo(null);               
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
     this.setVisible(true);
-
+    this.setBackground(Color.BLACK);
+    this.repaint();
   }       
 }

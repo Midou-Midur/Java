@@ -15,9 +15,8 @@ public class dessineNiveau extends JPanel {
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public dessineNiveau(final Graphics g, final String oui) throws IOException {
-    	new Fenetre();
-    		
+	public void dessinerNiveau(final Graphics g){
+		try {
     		Image img1 = ImageIO.read(new File("C:\\Users\\alexa\\Desktop\\JAVA\\Nouveau dossier\\JAVA\\sprite\\bone.png"));
     		Image img2 = ImageIO.read(new File("C:\\Users\\alexa\\Desktop\\JAVA\\Nouveau dossier\\JAVA\\sprite\\horizontal_bone.png"));
     		Image img3 = ImageIO.read(new File("C:\\Users\\alexa\\Desktop\\JAVA\\Nouveau dossier\\JAVA\\sprite\\vertical_bone.png"));
@@ -29,17 +28,17 @@ public class dessineNiveau extends JPanel {
     		Image img9 = ImageIO.read(new File("C:\\Users\\alexa\\Desktop\\JAVA\\Nouveau dossier\\JAVA\\sprite\\monster_3.png"));
     		Image img10 = ImageIO.read(new File("C:\\Users\\alexa\\Desktop\\JAVA\\Nouveau dossier\\JAVA\\sprite\\monster_4.png"));
     		
-   
-    		
+    		System.out.println("Je suis dedans");
+
+
     		int a = 0;
     		int b = 0;
-    		g.drawImage(img1, a, b,this);
     		for(int i = 0; i <240; i++) {
     		
-    			switch (oui)
+    			switch(ViewFacade.oui)
     				{
     				case "bone" :
-    			 		System.out.println(oui);
+    			 		System.out.println(ViewFacade.oui);
     					g.drawImage(img1, a, b,this);
     					a+=32;
     					
@@ -105,4 +104,8 @@ public class dessineNiveau extends JPanel {
     		}
 
     	}
+	 catch (IOException e) {
+    e.printStackTrace();
+  }     
+}
 }

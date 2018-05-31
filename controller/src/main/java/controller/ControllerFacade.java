@@ -44,7 +44,7 @@ public class ControllerFacade implements IController {
      */
     public void start() throws SQLException, IOException {
     		
-    	
+    
         for(int i = 1;i <= 12; i++)
         {
         	this.getView().displayMessage(this.getModel().getMap1ById(i).toString());
@@ -70,4 +70,6 @@ public class ControllerFacade implements IController {
     public IModel getModel() {
         return this.model;
     }
+
+
 }

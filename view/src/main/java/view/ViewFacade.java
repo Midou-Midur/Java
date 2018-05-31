@@ -2,26 +2,9 @@ package view;
 
 import view.Panneau;
 
-import java.io.FileOutputStream;
-import java.io.FileWriter;
 import java.awt.Graphics;
-import java.awt.Image;
-import java.awt.image.BufferedImage;
-import java.awt.image.ImageObserver;
-
 import java.io.IOException;
-import java.io.PrintWriter;
 
-import javax.imageio.ImageIO;
-import javax.swing.JPanel;
-
-
-import java.awt.Graphics;
-import java.awt.Image;
-import java.io.File;
-import java.io.IOException;
-import javax.imageio.ImageIO;
-import javax.swing.JPanel;
 
 /**
  * <h1>The Class ViewFacade provides a facade of the View component.</h1>
@@ -39,8 +22,12 @@ public class ViewFacade extends Fenetre implements IView {
 	/**
      * Instantiates a new view facade.
      */
+	
+	
+	
     public ViewFacade() {
         super();
+        
     }
 
     /*
@@ -48,20 +35,45 @@ public class ViewFacade extends Fenetre implements IView {
      * @see view.IView#displayMessage(java.lang.String)
      */
 
+    public static String oui = null;
+	public static int a=0;
+	public static int b=0;
 
     
-
+    
     public final void displayMessage(final String message) throws IOException {
+    	
     	 String[] splitArray = null;
+    	 int a = 0;
+    	 int b = 0;
     	 splitArray = message.split(" ");
     	 for(int i = 0; i<= 19;i++)
     	 {
- 
-    		   String oui = splitArray[i];
-    		   this.setContentPane(new dessineNiveau(null, oui));s
+    		 
+    		   oui = splitArray[i];
+    		   System.out.println(ViewFacade.oui);
+    		   
+			this.setContentPane(new Panneau());
+    		   this.repaint();
 
     	 }
     }
+
+
+	@Override
+	public void Fenetre() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void oui11() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
 
 
 
