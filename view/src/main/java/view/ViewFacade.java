@@ -58,7 +58,7 @@ public class ViewFacade extends Fenetre implements IView {
     	 {
  
     		   String oui = splitArray[i];
-    		   this.setContentPane(new dessineNiveau(null, oui));d 
+    		   this.setContentPane(new dessineNiveau(null, oui));
 
     	 }
     }
