@@ -1,7 +1,5 @@
 package model.mapgame.sprite.character;
 
-import game.commons.Position;
-
 public class Monster extends AbstractCharacter implements IMonster{
 
 	@Override

@@ -1,7 +1,5 @@
 package model.mapgame.sprite.character;
 
-import game.commons.Position;
-
 public class Lorann extends AbstractCharacter implements ILorann{
 
 	@Override

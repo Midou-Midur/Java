@@ -1,7 +1,15 @@
 package model.mapgame.sprite;
 
-import game.commons.Position;
-
 public class Bone extends AbstractSprite implements IBone{
+	
+	private DirectionEnum dir;
+	
+	public Bone(DirectionEnum dir) {
+		super();
+		this.dir = dir;
+	}
 
+	public DirectionEnum getDir() {
+		return this.dir;
+	}
 }
