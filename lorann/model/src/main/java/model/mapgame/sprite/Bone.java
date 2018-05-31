@@ -2,7 +2,7 @@ package model.mapgame.sprite;
 
 public class Bone extends AbstractSprite implements IBone{
 	
-	private DirectionEnum dir;
+	private final DirectionEnum dir;
 	
 	public Bone(DirectionEnum dir) {
 		super();

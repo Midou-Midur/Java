@@ -2,7 +2,7 @@ package model.mapgame.sprite;
 
 public class Gate extends AbstractSprite implements IGate {
 
-	private GateStateEnum gateState;
+	private final GateStateEnum gateState;
 	
 	public Gate(GateStateEnum gateState) {
 		super();
