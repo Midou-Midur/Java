@@ -4,6 +4,8 @@ import game.commons.Position;
 
 public interface IMapElement {
 	
+	Long getId();
+	
 	/**
 	 * Sending or setting Position
 	 * @param position
