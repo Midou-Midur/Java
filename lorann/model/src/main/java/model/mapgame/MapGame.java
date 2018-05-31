@@ -24,24 +24,24 @@ public class MapGame implements IMapGame {
 	@Override
 	public IMapElement getElement(Position position) throws GameException {
 
-		checkPosition((Position) position);
+		checkPosition(position);
 
 		return elements[position.getY()][position.getX()];
 	}
 
 	protected void checkPosition(Position position) throws GameException {
-		if (((Position) position).getX() < 0 || ((Position) position).getX() >= GameConstants.MAX_GAME_COLUMNS) {
-			throw new GameException("Position x(" + ((Position) position).getX() + ") out of range");
+		if (position.getX() < 0 || position.getX() >= GameConstants.MAX_GAME_COLUMNS) {
+			throw new GameException("Position x(" + position.getX() + ") out of range");
 		}
 
-		if (((Position) position).getY() < 0 || ((Position) position).getY() >= GameConstants.MAX_GAME_ROWS) {
-			throw new GameException("Position y(" + ((Position) position).getY() + ") out of range");
+		if (position.getY() < 0 || position.getY() >= GameConstants.MAX_GAME_ROWS) {
+			throw new GameException("Position y(" + position.getY() + ") out of range");
 		}
 	}
 
 	@Override
 	public void removeElement(Position position) throws GameException {
-		checkPosition((Position) position);
+		checkPosition(position);
 		elements[position.getY()][position.getX()] = null;
 	}
 }
