@@ -3,6 +3,7 @@ package game.commons;
 public class GameException extends Exception {
 
 	public GameException() {
+		
 	}
 
 	public GameException(String message) {

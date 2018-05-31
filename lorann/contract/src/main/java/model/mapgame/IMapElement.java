@@ -1,8 +1,6 @@
 package model.mapgame;
 
-import javax.swing.text.Position;
-
-import game.commons.Position1;
+import game.commons.Position;
 
 public interface IMapElement {
 	
