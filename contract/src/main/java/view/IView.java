@@ -1,5 +1,6 @@
 package view;
 
+import java.awt.Component;
 import java.awt.Graphics;
 import java.io.IOException;
 
@@ -20,5 +21,7 @@ public interface IView {
 	void Fenetre();
 
 	void paintComponent(Graphics g);
+
+	Component getGamePanel();
 
 }

@@ -2,6 +2,7 @@ package view;
 
 import view.Panneau;
 
+import java.awt.Component;
 import java.awt.Graphics;
 import java.io.IOException;
 
@@ -30,6 +31,8 @@ public class ViewFacade extends JPanel implements IView {
 	public static String non = null;
 	public static int a = -620;
 	public static int b = -350;
+	public static int px = 32;
+	public static int py = 32;
 	Fenetre fen = new Fenetre();
 
 	public final void displayMessage(final String message) throws IOException {
@@ -42,7 +45,6 @@ public class ViewFacade extends JPanel implements IView {
 			System.out.println(ViewFacade.oui);
 			non = non+" "+oui;
 			fen.setContentPane(new Panneau());
-			this.repaint();
 
 		}
 
@@ -73,6 +75,12 @@ public class ViewFacade extends JPanel implements IView {
 	public void paintComponent(Graphics g) {
 		// TODO Auto-generated method stub
 
+	}
+
+	@Override
+	public Component getGamePanel() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

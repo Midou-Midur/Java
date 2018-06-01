@@ -2,6 +2,7 @@ package view;
 
 import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
@@ -11,8 +12,12 @@ public class Panneau extends JPanel {
 
 
 	private static final long serialVersionUID = 1L;
+	private int px;
+	private int py;
 
 	public void paintComponent(Graphics g){
+		ViewFacade.a = 0;
+		ViewFacade.b = 0;
 		try {
     		Image img1 = ImageIO.read(new File("C:\\Users\\alexa\\Desktop\\JAVA\\Nouveau dossier\\JAVA\\sprite\\bone.png"));
     		Image img2 = ImageIO.read(new File("C:\\Users\\alexa\\Desktop\\JAVA\\Nouveau dossier\\JAVA\\sprite\\horizontal_bone.png"));
@@ -26,8 +31,6 @@ public class Panneau extends JPanel {
     		Image img10 = ImageIO.read(new File("C:\\Users\\alexa\\Desktop\\JAVA\\Nouveau dossier\\JAVA\\sprite\\monster_4.png"));
     		
 
-    		System.out.println("xDDDDDDDDD");
-
        		   System.out.println(ViewFacade.non);
        		  String haha = null;
        		String[] splitArray = null;
@@ -36,8 +39,6 @@ public class Panneau extends JPanel {
 
     			haha = splitArray[i];
 
-    		
-       		   
     			switch (haha)
     				{
     				case "bone" :
@@ -111,13 +112,116 @@ public class Panneau extends JPanel {
     				
     			}
     		}
+    	    Image imglor = ImageIO.read(new File("C:\\Users\\alexa\\Desktop\\JAVA\\Nouveau dossier\\JAVA\\sprite\\lorann_u.png"));
+    	    
+
+    	    g.drawImage(imglor, ViewFacade.px, ViewFacade.py, this);
+    	    this.repaint();
+    	   
+    		
     	}
 	 catch (IOException e) {
     e.printStackTrace();
-  } 
-		ViewFacade.a = 0;
-		ViewFacade.b = 0;
-	 
+  }
+
 }
+	
+
+		  public void keyPressed(final KeyEvent e) {
+	       		String[] splitArray = null;
+	       		int x = 22;
+	    		splitArray = ViewFacade.non.split(" ");
+			  
+		    final int keyCode = e.getKeyCode();
+		    
+		    if (keyCode == KeyEvent.VK_LEFT) {
+		        switch(splitArray[x-2])
+		        {
+
+		        case "n" :
+
+		      this.px -= 32;
+		      x-=1;
+		      this.repaint();
+
+		        case "b" :
+		            this.px -= 32;
+		            this.repaint();
+
+		        }
+		    }
+		    else if (keyCode == KeyEvent.VK_RIGHT) {
+		        switch(splitArray[x])
+		        {
+
+		        case "n" :
+
+		      this.px += 32;
+		      x+=1;
+		      this.repaint();
+
+		       case "b" :
+		            this.px += 32;
+		            this.repaint();
+		        }
+		    } 
+		    else if (keyCode == KeyEvent.VK_UP) {
+		        switch(splitArray[x-21])
+		        {
+		        case "v" :
+		            this.repaint();
+		            break;
+
+		        case "n" :
+
+		      this.py -= 32;
+		      x-=20;
+		      this.repaint();
+
+		        case "b" :
+		            this.px -= 32;
+		            this.repaint();
+		        }
+		    } 
+		    else if (keyCode == KeyEvent.VK_DOWN) {
+		        switch(splitArray[x+19])
+		        {
+		        case "v" :
+		            this.repaint();
+		            break;
+
+		        case "n" :
+
+		      this.py += 32;
+		      x+=20;
+		      this.repaint();
+
+		        case "b" :
+		            this.px += 32;
+		            this.repaint();
+		        }
+		    }
+		  }
+
+
+		  public void keyReleased(final KeyEvent arg0) {
+		  }
+
+		  public void keyTyped(final KeyEvent arg0) {
+		  }
+		
 }
+	
+	/*
+	
+    public void keyTyped(final KeyEvent e) {
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see com.game.controller.ITest#keyPressed(java.awt.event.KeyEvent)
+     */
+
+
 
