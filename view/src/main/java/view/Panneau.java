@@ -32,7 +32,7 @@ public class Panneau extends JPanel {
        		  String haha = null;
        		String[] splitArray = null;
     		splitArray = ViewFacade.non.split(" ");
-    		for (int i = 0; i <= 239; i++) {
+    		for (int i = 0; i <= 240; i++) {
 
     			haha = splitArray[i];
 

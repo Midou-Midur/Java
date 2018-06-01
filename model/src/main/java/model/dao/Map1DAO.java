@@ -46,7 +46,7 @@ public class Map1DAO extends AbstractDAO{
         Map1 map1 = null;
 
 
-    	int level = 1;
+    	int level = 5;
         switch (level)
         {
         case 1:
