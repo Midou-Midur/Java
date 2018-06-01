@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import model.IModel;
 import view.IView;
+import view.ViewFacade;
 
 /**
  * <h1>The Class ControllerFacade provides a facade of the Controller component.</h1>
@@ -19,6 +20,7 @@ public class ControllerFacade implements IController {
 
     /** The model. */
     private final IModel model;
+    
 
 
     /**
@@ -48,7 +50,6 @@ public class ControllerFacade implements IController {
         for(int i = 1;i <= 12; i++)
         {
         	this.getView().displayMessage(this.getModel().getMap1ById(i).toString());
-
         }
 
     }

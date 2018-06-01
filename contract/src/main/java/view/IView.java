@@ -19,4 +19,6 @@ public interface IView {
 	
 	void Fenetre();
 
+	void paintComponent(Graphics g);
+
 }

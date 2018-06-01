@@ -26,11 +26,19 @@ public class Panneau extends JPanel {
     		Image img10 = ImageIO.read(new File("C:\\Users\\alexa\\Desktop\\JAVA\\Nouveau dossier\\JAVA\\sprite\\monster_4.png"));
     		
 
-    		System.out.println(ViewFacade.oui);
     		System.out.println("xDDDDDDDDD");
 
+       		   System.out.println(ViewFacade.non);
+       		  String haha = null;
+       		String[] splitArray = null;
+    		splitArray = ViewFacade.non.split(" ");
+    		for (int i = 0; i <= 239; i++) {
 
-    			switch (ViewFacade.oui)
+    			haha = splitArray[i];
+
+    		
+       		   
+    			switch (haha)
     				{
     				case "bone" :
 
@@ -88,12 +96,13 @@ public class Panneau extends JPanel {
      					 ViewFacade.a+=32;
      					break;
        					
-    				case "vide" :
+    				case "void" :
     					System.out.println(ViewFacade.oui);
     					 
     					 ViewFacade.a+=32;
     					break;
     			} 
+       	 
     			this.repaint();
     			if (ViewFacade.a>609)
     			{
@@ -101,10 +110,14 @@ public class Panneau extends JPanel {
     				ViewFacade.b+=32;
     				
     			}
-
+    		}
     	}
 	 catch (IOException e) {
     e.printStackTrace();
-  }     
-	}
+  } 
+		ViewFacade.a = 0;
+		ViewFacade.b = 0;
+	 
 }
+}
+
