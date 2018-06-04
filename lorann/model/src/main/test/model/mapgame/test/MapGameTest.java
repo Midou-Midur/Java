@@ -3,13 +3,16 @@
  */
 package model.mapgame.test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
+
+import game.commons.GameException;
+import game.commons.Position;
+import model.mapgame.IMapElement;
+import model.mapgame.MapGame;
+import model.mapgame.sprite.Purse;
 
 /**
  * @author GL552VW 741698
@@ -17,38 +20,17 @@ import org.junit.Test;
  */
 public class MapGameTest {
 
-	/**
-	 * @throws java.lang.Exception
-	 */
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-		
-	}
-
-	/**
-	 * @throws java.lang.Exception
-	 */
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
-	}
-
-	/**
-	 * @throws java.lang.Exception
-	 */
-	@Before
-	public void setUp() throws Exception {
-	}
-
-	/**
-	 * @throws java.lang.Exception
-	 */
-	@After
-	public void tearDown() throws Exception {
-	}
-
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void testGetElement() {
+		try {
+			MapGame mapi = new MapGame();
+			IMapElement element = new Purse();
+			Position pos = new Position(1, 9);
+			mapi.addElement(pos, element);
+			assertEquals(element, mapi.getElement(pos));
+		} catch (GameException e) {
+			assertTrue(e.getMessage(), false);
+		}
 	}
 
 }

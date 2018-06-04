@@ -6,6 +6,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
+import game.commons.Position;
 import model.mapgame.sprite.character.FBallEnum;
 import model.mapgame.sprite.character.Lorann;
 
@@ -30,8 +31,8 @@ public class LorannTest {
 	@Test
 	public void testGetPosition() {
 		Lorann lorann = new Lorann(FBallEnum.FBALLORANN);
-		assertEquals(FBallEnum.FBALLORANN, lorann.getPosition());
-		lorann.setPosition();
-		assertEquals(FBallEnum.FBALL1, lorann.getPosition());
+		Position pos = new Position(2, 7);
+		lorann.setPosition(pos);
+		assertEquals(pos, lorann.getPosition());
 	}
 }

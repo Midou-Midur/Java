@@ -1,6 +1,5 @@
 package model.mapgame.sprite.character;
 
-import model.mapgame.sprite.ICball;
 import model.mapgame.sprite.IPurse;
 
 public interface IResult {
@@ -18,19 +17,4 @@ public interface IResult {
 	 * @param purse
 	 */
 	void addPurse(IPurse purse);
-
-	/**
-	 * Openning the door
-	 * 
-	 * @param cball
-	 */
-	void addCball(ICball cball);
-
-	/**
-	 * Putting a fball to score
-	 * 
-	 * @param fball
-	 */
-	void setFBall(FBallEnum fball);
-
 }
