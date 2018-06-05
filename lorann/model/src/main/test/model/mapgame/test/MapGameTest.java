@@ -21,7 +21,7 @@ import model.mapgame.sprite.Purse;
 public class MapGameTest {
 
 	/**
-	 * 
+	 *  We want to know if element equals to  
 	 */
 	@Test
 	public void testGetElement() {
