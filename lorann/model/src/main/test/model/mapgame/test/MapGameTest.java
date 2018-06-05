@@ -20,6 +20,9 @@ import model.mapgame.sprite.Purse;
  */
 public class MapGameTest {
 
+	/**
+	 * 
+	 */
 	@Test
 	public void testGetElement() {
 		try {
