@@ -18,5 +18,4 @@ public class MonsterTest {
 		Monster monster = new Monster(FBallEnum.FBALL1, MonsterNumberEnum.MONSTER1);
 		assertEquals(MonsterNumberEnum.MONSTER1, monster.getMonsterNumber());
 	}
-
 }
