@@ -6,6 +6,7 @@ public class Monster extends AbstractCharacter implements IMonster {
 	public Monster(FBallEnum fBall, final MonsterNumberEnum monsterNumber) {
 		super(fBall);
 		this.monsterNumber = monsterNumber;
+		
 	}
 
 	@Override
