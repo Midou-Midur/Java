@@ -1,40 +1,34 @@
 package main;
 
-import java.io.IOException;
 import java.sql.SQLException;
 
-
 import controller.ControllerFacade;
+import game.commons.GameException;
 import model.ModelFacade;
-import view.Fenetre;
 import view.ViewFacade;
 
+// TODO: Auto-generated Javadoc
 /**
  * <h1>The Class Main.</h1>
  *
  * @author Jean-Aymeric DIET jadiet@cesi.fr
  * @version 1.0
  */
-
 public abstract class Main {
-	
 
-    /**
-     * The main method.
-     *
-     * @param args
-     *            the arguments
-     * @throws IOException 
-     */
-    public static void main(final String[] args) throws IOException {
-        final ControllerFacade controller = new ControllerFacade(new ViewFacade(), new ModelFacade());
-
-        try {
-            controller.start();
-        } catch (final SQLException exception) {
-            exception.printStackTrace();
-        }
-    }
-
+	/**
+	 * The main method.
+	 *
+	 * @param args
+	 *            the arguments
+	 */
+	public static void main(final String[] args) {
+		try {
+			final ControllerFacade controller = new ControllerFacade(new ViewFacade(), new ModelFacade());
+			controller.start();
+		} catch (final SQLException | GameException exception) {
+			exception.printStackTrace();
+		}
+	}
 
 }

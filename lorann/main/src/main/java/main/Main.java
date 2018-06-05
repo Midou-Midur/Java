@@ -3,6 +3,7 @@ package main;
 import java.sql.SQLException;
 
 import controller.ControllerFacade;
+import game.commons.GameException;
 import model.ModelFacade;
 import view.ViewFacade;
 
@@ -14,20 +15,19 @@ import view.ViewFacade;
  */
 public abstract class Main {
 
-    /**
-     * The main method.
-     *
-     * @param args
-     *            the arguments
-     */
-    public static void main(final String[] args) {
-        final ControllerFacade controller = new ControllerFacade(new ViewFacade(), new ModelFacade());
-
-        try {
-            controller.start();
-        } catch (final SQLException exception) {
-            exception.printStackTrace();
-        }
-    }
+	/**
+	 * The main method.
+	 *
+	 * @param args
+	 *            the arguments
+	 */
+	public static void main(final String[] args) {
+		try {
+			final ControllerFacade controller = new ControllerFacade(new ViewFacade(), new ModelFacade());
+			controller.start();
+		} catch (final SQLException | GameException exception) {
+			exception.printStackTrace();
+		}
+	}
 
 }

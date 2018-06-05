@@ -7,16 +7,29 @@ import java.util.Observer;
 import javax.swing.JFrame;
 
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class BoardFrame.
+ */
 public class BoardFrame extends JFrame implements IBoard {
 
+    /** The Constant serialVersionUID. */
     private static final long serialVersionUID = -6563585351564617603L;
 
+    /** The Constant defaultFrameSize. */
     private static final int  defaultFrameSize = 700;
 
 
+    /** The board panel. */
     private final BoardPanel  boardPanel;
 
 
+    /**
+     * Instantiates a new board frame.
+     *
+     * @param title the title
+     * @param decorated the decorated
+     */
     public BoardFrame(final String title, final Boolean decorated) {
         super();
         this.setTitle("Lorann");

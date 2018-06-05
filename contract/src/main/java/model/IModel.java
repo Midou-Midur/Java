@@ -3,6 +3,10 @@ package model;
 import java.sql.SQLException;
 import java.util.List;
 
+import game.commons.GameException;
+import model.mapgame.IMapGame;
+
+// TODO: Auto-generated Javadoc
 /**
  * <h1>The Interface IModel.</h1>
  *
@@ -22,7 +26,16 @@ public interface IModel {
      */
 	Example getExampleById(int id) throws SQLException;
 	
-	Map1 getMap1ById(int id) throws SQLException;
+	
+	/**
+	 * Gets the game by level.
+	 *
+	 * @param level the level
+	 * @return the game by level
+	 * @throws SQLException the SQL exception
+	 * @throws GameException the game exception
+	 */
+	IMapGame getGameByLevel(int level) throws SQLException, GameException;
 
     /**
      * Gets the example by name.

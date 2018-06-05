@@ -2,6 +2,7 @@ package showboard;
 
 import java.awt.Image;
 
+// TODO: Auto-generated Javadoc
 /**
  * <h1>The Interface ISquare.</h1>
  * <p>

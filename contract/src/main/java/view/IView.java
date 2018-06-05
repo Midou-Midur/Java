@@ -1,10 +1,16 @@
 package view;
 
-import java.awt.Component;
+
 import java.awt.Graphics;
-import java.io.IOException;
+
+import javax.swing.JPanel;
+
+import game.commons.GameException;
+import game.commons.Position;
+import model.mapgame.IMapGame;
 
 
+// TODO: Auto-generated Javadoc
 /**
  * <h1>The Interface IView.</h1>
  *
@@ -14,14 +20,34 @@ import java.io.IOException;
 public interface IView {
 
 
-    void displayMessage(String message) throws IOException;
+	/**
+	 * Sets the map game.
+	 *
+	 * @param mapGame the new map game
+	 */
+	void setMapGame(final IMapGame mapGame);
 
-	void oui11();
-	
-	void Fenetre();
 
-	void paintComponent(Graphics g);
+	/**
+	 * Gets the game panel.
+	 *
+	 * @return the game panel
+	 */
+	JPanel getGamePanel();
 
-	Component getGamePanel();
+	/**
+	 * Draw lorann.
+	 *
+	 * @param pos the pos
+	 * @throws GameException 
+	 */
+	void drawLorann(int pos) throws GameException;
+
+
+
+	void paint(Graphics g);
+
+	void drawFireball() throws GameException;
+
 
 }

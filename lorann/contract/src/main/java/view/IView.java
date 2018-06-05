@@ -1,5 +1,9 @@
 package view;
 
+import javax.swing.JPanel;
+
+import model.mapgame.IMapGame;
+
 /**
  * <h1>The Interface IView.</h1>
  *
@@ -7,12 +11,9 @@ package view;
  * @version 1.0
  */
 public interface IView {
+	void setMapGame(final IMapGame mapGame);
 
-    /**
-     * Display message.
-     *
-     * @param message
-     *            the message
-     */
-    void displayMessage(String message);
+	void drawLorann();
+
+	JPanel getGamePanel();
 }
