@@ -1,0 +1,7 @@
+controller
+game.commons
+model
+model.mapgame
+model.mapgame.sprite
+model.mapgame.sprite.character
+view

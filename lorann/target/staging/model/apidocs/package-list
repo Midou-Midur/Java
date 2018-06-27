@@ -1,0 +1,6 @@
+model
+model.dao
+model.mapgame
+model.mapgame.dao
+model.mapgame.sprite
+model.mapgame.sprite.character
