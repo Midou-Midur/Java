@@ -8,8 +8,8 @@ public interface IMapGame {
 	/**
 	 * Putting an element in a specified cell which identifies by position
 	 * 
-	 * @param position
-	 * @param element
+	 * @param position Position of an element within map
+	 * @param element Element of game(lorann, monster, purse...)
 	 * @throws GameException
 	 *             If Position is out of range(number of position) or Position is
 	 *             busy

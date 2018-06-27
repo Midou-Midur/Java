@@ -16,4 +16,20 @@ public interface IView {
 	void drawLorann();
 
 	JPanel getGamePanel();
+	
+	/**
+	 * Convert a model X position to x pixel coordinate of view
+	 * 
+	 * @param x
+	 * @return
+	 */
+	public int convX(final int x);
+	
+	/**
+	 * Convert a model Y position to y pixel coordinate of view
+	 * 
+	 * @param y
+	 * @return
+	 */
+	public int convY(final int y);
 }

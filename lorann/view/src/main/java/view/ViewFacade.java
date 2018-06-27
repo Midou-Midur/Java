@@ -139,23 +139,20 @@ public class ViewFacade extends JFrame implements IView {
 		return lorannSprite;
 	}
 
-	/**
-	 * Convert a model X position to x pixel coordinate of view
-	 * 
-	 * @param x
-	 * @return
+	/*
+	 * (non-Javadoc)
+	 * @see view.IView#convX(int)
 	 */
-	protected int convX(final int x) {
+	@Override
+	public int convX(final int x) {
 		return x * GameConstants.SPRITE_WIDTH;
 	}
 
-	/**
-	 * Convert a model Y position to y pixel coordinate of view
-	 * 
-	 * @param y
-	 * @return
+	/*
+	 * (non-Javadoc)
+	 * @see view.IView#convY(int)
 	 */
-	protected int convY(final int y) {
+	public int convY(final int y) {
 		return (GameConstants.MAX_GAME_ROWS - y - 1) * GameConstants.SPRITE_HEIGHT;
 	}
 
